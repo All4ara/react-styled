@@ -1,14 +1,17 @@
 
 import React from 'react'
+import { Hero } from './components/Hero';
 import { Navbar } from './components/Navbar'
+import { SliderData } from './data/SliderDate';
 import GlobalStyle from './globalStyle';
 
 
 function App() {
   return (
     <>
-    <GlobalStyle />
+      <GlobalStyle />
       <Navbar/>
+      <Hero slides={SliderData}/>
     </>
   );
 }
