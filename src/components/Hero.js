@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef} from 'react'
 import styled, { css } from 'styled-components/macro';
 import { Button } from './Button';
 import { IoMdArrowRoundForward } from 'react-icons/io';
@@ -57,10 +57,30 @@ const HeroImage = styled.img`
     object-fit: cover;
 `
 const HeroContent = styled.div`
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    width: calc(100% - 100px);
+    color: #fff;
 
+    h1 {
+        font-size: clamp(1rem, 8vw, 2rem);
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+        text-align: left;
+        margin-bottom: 0.8rem;
+    }
+
+    p {
+        margin-bottom: 1.2rem;
+        text-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    }
 `
 const Arrow = styled(IoMdArrowRoundForward)`
-   
+   margin-left: 0.5rem;
 `
 
 const SliderButtons = styled.div`
@@ -96,26 +116,45 @@ const NextArrow = styled(IoArrowForward)`
 `
 
 export const Hero = ({ slides }) => {
+    const [current, setCurrent] = useState(0);
+    const length = slides.length;
+    const timeout = useRef(null);
+
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1)
+
+        console.log(current)
+    }
+
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1)
+
+        console.log(current)
+    }
+
     return (
         <HeroSection>
             <HeroWrapper>
                 {slides.map((slide, index) => (
                     <HeroSlide key={index}>
-                        <HeroSlider>
+                        {index === current && (
+                            <HeroSlider>
                             <HeroImage src={slide.image} alt={slide.alt}/>
                             <HeroContent>
                                 <h1>{slide.title}</h1>
                                 <p>{slide.price}</p>
                                 <Button to={slide.path} primary="true" css={`max-width: 160px;`}>
                                     {slide.label}
+                                    <Arrow/>
                                 </Button>
                             </HeroContent>
                         </HeroSlider>
+                        )}
                     </HeroSlide>
                 ))}
                 <SliderButtons>
-                    <PrevArrow />
-                    <NextArrow />
+                    <PrevArrow onClick={prevSlide}/>
+                    <NextArrow onClick={nextSlide}/>
                 </SliderButtons>
             </HeroWrapper>
         </HeroSection>
