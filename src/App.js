@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Dropdown from './components/Dropdown';
 import Features from './components/Features';
+import Footer from './components/Footer';
 import { Hero } from './components/Hero';
 import InfoSection from './components/InfoSection';
 import ListingsSection from './components/ListingsSection';
@@ -28,6 +29,7 @@ function App() {
       <ListingsSection />
       <Features />
       <InfoSection {...InfoDataTwo}/>
+      <Footer />
     </>
   );
 }
