@@ -70,7 +70,7 @@ const NavBtn = styled.div`
 export const Navbar = ({ toggle }) => {
     return (
         <Nav>
-            <Logo>Logo</Logo>
+            <Logo to='/'>Logo</Logo>
             <MenuBars onClick={toggle}/>
             <NavMenu>
                 {menuData.map((item, index) => (
