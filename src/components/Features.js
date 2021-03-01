@@ -80,7 +80,7 @@ const Features = () => {
             <Container>
                 <Wrap>
                     <ColumnLeft>
-                        <Content>
+                        <Content data-aos='fade-right' data-aos-duration='1200' data-aos-once='true' data-aos-delay='300' data-aos-anchor-placement='center-bottom'>
                             <h1>Stunning Interior</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                             sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -93,7 +93,7 @@ const Features = () => {
                         </Content>  
                     </ColumnLeft>
                     <ColumnRight>
-                        <Image src={ImageOne}/>
+                        <Image data-aos='fade-left' data-aos-duration='1000' data-aos-once='true' data-aos-anchor-placement='center-bottom' src={ImageOne}/>
                     </ColumnRight>
                 </Wrap>
             </Container>
