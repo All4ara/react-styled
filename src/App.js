@@ -6,6 +6,10 @@ import { Navbar } from './components/Navbar'
 import GlobalStyle from './globalStyle';
 import Home from './pages';
 import { Switch, Route }  from 'react-router-dom';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Rentals from './pages/Rentals';
+import Homes from './pages/Homes';
 
 
 function App() {
@@ -22,6 +26,10 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle}/>
       <Switch>
         <Route path='/' exact component={Home} />
+        <Route path='/about' exact component={About} />
+        <Route path='/contact' exact component={Contact} />
+        <Route path='/rentals' exact component={Rentals} />
+        <Route path='/homes' exact component={Homes} />
       </Switch>
       <Footer />
     </>
