@@ -112,7 +112,7 @@ const Form = () => {
     return (
         <>
             <FormWrap>
-                <ContactForm onSubmit={handleSubmit}>
+                <ContactForm action="https://formspree.io/f/xdoprylv" method="POST">
                     <h2>Contact Form</h2>
                     <label htmlFor="name">Name</label>
                     <Input type="text" name="name" value={state.name} onChange={handleInput}/>
@@ -137,7 +137,7 @@ const Form = () => {
                         </InputError>
                     )}
                     
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit" value="Send">Submit</Button>
                 </ContactForm>
             </FormWrap>
         </>
