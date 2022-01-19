@@ -97,7 +97,7 @@ const arrowButtons = css`
     height: 50px;
     color: #fff;
     cursor: pointer;
-    background: #000d1a;
+    background: #8D3CFC;
     border-radius: 50px;
     padding: 10px;
     margin-right: 1rem;
@@ -105,7 +105,7 @@ const arrowButtons = css`
     transition: 0.3s;
 
     &:hover {
-        background: #cd853f;
+        background: #1BF0B6;
         transform: scale(1.05);
     }
 `
@@ -127,7 +127,7 @@ const Hero = ({ slides }) => {
     //     }
 
     //     timeout.current = setTimeout(nextSlide, 4000)
-        
+
     //     return function () {
     //         if(timeout.current) {
     //             clearTimeout(timeout.current)
@@ -138,7 +138,7 @@ const Hero = ({ slides }) => {
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
 
-        if(timeout.current) {
+        if (timeout.current) {
             clearTimeout(timeout.current)
         }
         //console.log(current)
@@ -147,19 +147,19 @@ const Hero = ({ slides }) => {
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1)
 
-        if(timeout.current) {
+        if (timeout.current) {
             clearTimeout(timeout.current)
         }
         //console.log(current)
     }
 
-    if(!Array.isArray(slides) || slides.length <= 0) {
+    if (!Array.isArray(slides) || slides.length <= 0) {
         return null;
     }
 
     const fadeAnimation = {
         hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 0.8} },
+        visible: { opacity: 1, transition: { duration: 0.8 } },
         exit: { opacity: 0 }
     }
 
@@ -171,28 +171,28 @@ const Hero = ({ slides }) => {
                         <HeroSlide key={index}>
                             {index === current && (
                                 <HeroSlider>
-                                <HeroImage src={slide.image} alt={slide.alt} 
-                                    initial='hidden'
-                                    animate='visible'
-                                    exit='exit'
-                                    variants={fadeAnimation}
-                                />
-                                <HeroContent>
-                                    <h1 data-aos='fade-down' data-aos-duration='600'>{slide.title}</h1>
-                                    <p data-aos='fade-down' data-aos-duration='600' data-aos-delay='200'>{slide.price}</p>
-                                    <Button data-aos='zoom-out' data-aos-duration='1000' data-aos-delay='300' to={slide.path} primary="true" css={`max-width: 160px;`}>
+                                    <HeroImage src={slide.image} alt={slide.alt}
+                                        initial='hidden'
+                                        animate='visible'
+                                        exit='exit'
+                                        variants={fadeAnimation}
+                                    />
+                                    <HeroContent>
+                                        <h1 data-aos='fade-down' data-aos-duration='600'>{slide.title}</h1>
+                                        <p data-aos='fade-down' data-aos-duration='600' data-aos-delay='200'>{slide.price}</p>
+                                        {/* <Button data-aos='zoom-out' data-aos-duration='1000' data-aos-delay='300' to={slide.path} primary="true" css={`max-width: 160px;`}>
                                         {slide.label}
                                         <Arrow/>
-                                    </Button>
-                                </HeroContent>
-                            </HeroSlider>
+                                    </Button> */}
+                                    </HeroContent>
+                                </HeroSlider>
                             )}
                         </HeroSlide>
                     ))}
                 </AnimatePresence>
                 <SliderButtons>
-                    <PrevArrow onClick={prevSlide}/>
-                    <NextArrow onClick={nextSlide}/>
+                    <PrevArrow onClick={prevSlide} />
+                    <NextArrow onClick={nextSlide} />
                 </SliderButtons>
             </HeroWrapper>
         </HeroSection>

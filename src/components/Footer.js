@@ -7,7 +7,11 @@ import {
   FaInstagram,
   FaFacebookF,
   FaLinkedinIn,
-  FaYoutube
+  FaYoutube,
+  FaDiscord,
+  FaTwitter,
+  FaMedium,
+  FaMediumM
 } from 'react-icons/fa';
 
 const Section = styled.section`
@@ -81,14 +85,20 @@ const SocialIcons = styled.div`
 const Icons = css`
   font-size: clamp(1rem, 6vw, 2rem);
   margin-right: 1.5rem;
-  color: #cd853f;
+  color: #F918FC;
 `;
 
 const Instagram = styled(FaInstagram)`
   ${Icons}
 `;
+const Discord = styled(FaDiscord)`
+  ${Icons}
+`;
+const Twitter = styled(FaTwitter)`
+  ${Icons}
+`;
 
-const Facebook = styled(FaFacebookF)`
+const Medium = styled(FaMediumM)`
   ${Icons}
 `;
 
@@ -113,66 +123,67 @@ const Contact = styled.div`
 `;
 
 const Footer = () => {
-    return (
-        <Section>
-            <Container>
-                <FooterTop>
-                    <Quote>
-                        <h3>Let's find <br/> your Dream Home</h3>
-                    </Quote>
-                    <FooterInfo>
-                        <h4>Contact Us</h4>
-                        <Link to="/homes">FAQS</Link>
-                        <Link to="/homes">Support</Link>
-                        <Link to="/homes">Questions</Link>
-                    </FooterInfo>
-                    <FooterInfo>
-                        <h4>Offices</h4>
-                        <Link to="/homes">United States</Link>
-                        <Link to="/homes">Europe</Link>
-                        <Link to="/homes">Canada</Link>
-                    </FooterInfo>
-                </FooterTop>
-                <FooterBottom>
-                    <SocialIcons>
-                        <a
-                        href='//www.google.com'
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        >
-                        <Youtube />
-                        </a>
-                        <a
-                        href='//www.google.com'
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        >
-                        <Instagram />
-                        </a>
-                        <a
-                        href='//www.google.com'
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        >
-                        <Facebook />
-                        </a>
-                        <a
-                        href='//www.google.com'
-                        rel='noopener noreferrer'
-                        target='_blank'
-                        >
-                        <LinkedIn />
-                        </a>
-                    </SocialIcons>
-                    <Contact>
-                        <Button to='/homes'>
-                        Let's Chat <IoMdArrowRoundForward />
-                        </Button>
-                    </Contact>
-                </FooterBottom>
-            </Container>
-        </Section>
-    )
+  return (
+    <Section>
+      <Container>
+        <FooterTop>
+          <Quote>
+            <h2>EthFanatics <br /> </h2>
+            <h5>Join our community bellow</h5>
+          </Quote>
+          {/* <FooterInfo>
+            <h4>Contact Us</h4>
+            <Link to="/homes">FAQS</Link>
+            <Link to="/homes">Support</Link>
+            <Link to="/homes">Questions</Link>
+          </FooterInfo>
+          <FooterInfo>
+            <h4>Offices</h4>
+            <Link to="/homes">United States</Link>
+            <Link to="/homes">Europe</Link>
+            <Link to="/homes">Canada</Link>
+          </FooterInfo> */}
+        </FooterTop>
+        <FooterBottom>
+          <SocialIcons>
+            <a
+              href='https://discord.gg/FZVDSs45sM'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <Discord />
+            </a>
+            <a
+              href='https://www.instagram.com/ethfanatics/'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <Instagram />
+            </a>
+            <a
+              href='https://twitter.com/EthFanatics'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <Twitter />
+            </a>
+            <a
+              href='//www.google.com'
+              rel='noopener noreferrer'
+              target='_blank'
+            >
+              <Medium />
+            </a>
+          </SocialIcons>
+          {/* <Contact>
+            <Button to='/homes'>
+              Let's Chat <IoMdArrowRoundForward />
+            </Button>
+          </Contact> */}
+        </FooterBottom>
+      </Container>
+    </Section>
+  )
 }
 
 export default Footer

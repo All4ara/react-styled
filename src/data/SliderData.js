@@ -1,46 +1,33 @@
-import ImageOne from '../images/House1.jpg';
-import ImageTwo from '../images/House2.jpg';
-import ImageThree from '../images/House3.jpg';
-import ImageFour from '../images/House4.jpg';
-import ImageFive from '../images/House5.jpg';
-import ImageSix from '../images/House6.jpg';
-import ImageSeven from '../images/House7.jpg';
-import ImageEight from '../images/House8.jpg';
+import ImageOne from '../images/EFCenter.jpeg';
+
 
 
 export const SliderData = [
     {
-        title: 'Luxury Villa in Bali, Indonesia',
-        price: '$4,280,000',
+        title: 'Real World Utility',
+        price: 'Cards | Gear | Tickets | More...',
         path: '/home',
         label: 'Veiw Home',
         image: ImageOne,
         alt: 'House'
     },
     {
-        title: 'House in San Jose, Costa Rica',
-        price: '$2,550,000',
+        title: 'Total Supply',
+        price: '12,345 EthFans',
         path: '/home',
         label: 'Veiw Home',
-        image: ImageTwo,
+        image: ImageOne,
         alt: 'House'
     },
     {
-        title: 'House in Calabases, California',
-        price: '$7,480,000',
+        title: 'Metaverse Access',
+        price: 'Digital Assets | Events',
         path: '/home',
         label: 'Veiw Home',
-        image: ImageThree,
+        image: ImageOne,
         alt: 'House'
     },
-    {
-        title: 'House in Houston, Texas',
-        price: '$6,280,000',
-        path: '/home',
-        label: 'Veiw Home',
-        image: ImageFour,
-        alt: 'House'
-    },
+
 ]
 
 export const SliderDataTwo = [
@@ -49,7 +36,7 @@ export const SliderDataTwo = [
         price: '$10,000/weekly',
         path: '/home',
         label: 'Veiw Home',
-        image: ImageFive,
+        image: ImageOne,
         alt: 'House'
     },
     {
@@ -57,7 +44,7 @@ export const SliderDataTwo = [
         price: '$5,000/weekly',
         path: '/home',
         label: 'Veiw Home',
-        image: ImageSix,
+        image: ImageOne,
         alt: 'House'
     },
     {
@@ -65,7 +52,7 @@ export const SliderDataTwo = [
         price: '$8,500/monthly',
         path: '/home',
         label: 'Veiw Home',
-        image: ImageSeven,
+        image: ImageOne,
         alt: 'House'
     },
     {
@@ -73,7 +60,7 @@ export const SliderDataTwo = [
         price: '$1,000/daily',
         path: '/home',
         label: 'Veiw Home',
-        image: ImageEight,
+        image: ImageOne,
         alt: 'House'
     },
 ]

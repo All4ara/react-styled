@@ -60,7 +60,7 @@ const ColumnRight = styled.div`
     }
 `
 
-const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, paragraphFour, paragraphFive, buttonLabel, reverse, image, delay, title }) => {
+const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, paragraphFour, paragraphFive, paragraphSix, paragraphSeven, paragraphEight, paragraphNine, buttonLabel, reverse, image, delay, title }) => {
     return (
         <Section>
             <Container>
@@ -78,6 +78,14 @@ const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, para
                         {paragraphFour}
                         <br />
                         {paragraphFive}
+                        <br />
+                        {paragraphSix}
+                        <br />
+                        {paragraphSeven}
+                        <br />
+                        {paragraphEight}
+                        <br />
+                        {paragraphNine}
                     </p>
                     {/* <Button to="/homes" primary="true">{buttonLabel}</Button> */}
                 </ColumnLeft>

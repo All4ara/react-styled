@@ -30,10 +30,11 @@ const ColumnLeft = styled.div`
 
     h1 {
         margin-bottom: 1rem;
-        font-size: clamp(1.5rem, 6vw, 2rem)
+        font-size: clamp(1.5rem, 6vw, 1.5rem)
     }
     p {
         margin-bottom: 2rem;
+        
     }
 `
 const ColumnRight = styled.div`
@@ -60,7 +61,7 @@ const ColumnRight = styled.div`
     }
 `
 
-const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, paragraphFour, paragraphFive, buttonLabel, reverse, image, delay, title }) => {
+const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, paragraphFour, paragraphFive, paragraphSix, paragraphSeven, paragraphEight, paragraphNine, paragraphTen, buttonLabel, reverse, image, delay, title, stepOne, stepTwo, stepThree }) => {
     return (
         <Section>
             <Container>
@@ -72,12 +73,28 @@ const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, para
                         {paragraphOne}
                         <br />
                         {paragraphTwo}
-                        <br />
+                    </p>
+                    <h4>{stepOne}</h4>
+                    <p>
                         {paragraphThree}
                         <br />
                         {paragraphFour}
-                        <br />
+                    </p>
+                    <h4>{stepTwo}</h4>
+                    <p>
                         {paragraphFive}
+                        <br />
+                        {paragraphSix}
+                        <br />
+                        {paragraphSeven}
+                    </p>
+                    <h4>{stepThree}</h4>
+                    <p>
+                        {paragraphEight}
+                        <br />
+                        {paragraphNine}
+                        <br />
+                        {paragraphTen}
                     </p>
                     {/* <Button to="/homes" primary="true">{buttonLabel}</Button> */}
                 </ColumnLeft>
@@ -85,7 +102,7 @@ const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, para
                     <img src={image} alt='home' data-aos='zoom-out' data-aos-duration='500' data-aos-once='true' data-aos-delay={delay} data-aos-anchor-placement='center-bottom' />
                 </ColumnRight>
             </Container>
-        </Section>
+        </Section >
     )
 }
 

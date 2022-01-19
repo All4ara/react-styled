@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components/macro';
 import { Link, useLocation } from 'react-router-dom';
 import { menuData } from '../data/MenuData.js'
 import { Button } from './Button.js';
-import Bars from '../images/hamburg.svg';
+import Bars from '../images/three-dots.png';
+import EFLogo from '../images/ef-logo.png'
 
 const Nav = styled.nav`
     height: 60px;
@@ -19,7 +20,7 @@ const NavLink = css`
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 .5rem;
     height: 100%;
     cursor: pointer;
     text-decoration: none;
@@ -36,8 +37,8 @@ const MenuBars = styled.i`
         display: block;
         background-image: url(${Bars});
         background-size: contain;
-        height: 40px;
-        width: 40px;
+        height: 38px;
+        width: 38px;
         cursor: pointer;
         position: absolute;
         top: 0;
@@ -54,7 +55,7 @@ const NavMenu = styled.div`
         display: none;
     }
 `
-const NavMenuLinks = styled(Link)`
+const NavMenuLinks = styled.a`
     ${NavLink}
 `
 const NavBtn = styled.div`
@@ -68,7 +69,7 @@ const NavBtn = styled.div`
 `
 
 export const Navbar = ({ toggle }) => {
-    const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(false);
   const location = useLocation();
 
   const changeBackground = () => {
@@ -93,25 +94,36 @@ export const Navbar = ({ toggle }) => {
 
   let style = {
     backgroundColor:
-      navbar || location.pathname !== '/' ? '#CD853F' : 'transparent',
+      navbar || location.pathname !== '/' ? '#000d1a' : 'transparent',
     transition: '0.4s'
   };
 
 
-    return (
-        <Nav style={style}>
-            <Logo to='/'>Logo</Logo>
-            <MenuBars onClick={toggle}/>
-            <NavMenu>
-                {menuData.map((item, index) => (
-                    <NavMenuLinks to={item.link} key={index}>
-                        {item.title}
-                    </NavMenuLinks>
-                ))}
-            </NavMenu>
-            <NavBtn>
-                <Button to='/contact' primary='true'>Contact Us</Button>
-            </NavBtn>
-        </Nav>
-    )
+  return (
+    <Nav style={style}>
+      <Logo to='/'><img src={EFLogo} alt='Logo' style={{ "width": "3.5rem" }} /></Logo>
+      <MenuBars onClick={toggle} />
+      <NavMenu>
+
+        <NavMenuLinks href={"https://discord.gg/FZVDSs45sM"} target={"_blank"}>
+          Discord
+        </NavMenuLinks>
+        <NavMenuLinks href={"https://twitter.com/EthFanatics"} target={"_blank"}>
+          Twitter
+        </NavMenuLinks>
+        <NavMenuLinks href={"https://bunches.chat/invite/znxo8/a4n6r5"} target={"_blank"}>
+          Bunches
+        </NavMenuLinks>
+        <NavMenuLinks href={"https://www.instagram.com/ethfanatics/"} target={"_blank"}>
+          Instagram
+        </NavMenuLinks>
+
+      </NavMenu>
+      <NavBtn>
+        <NavMenuLinks href={"https://www.instagram.com/ethfanatics/"} target={"_blank"}>
+          Mint
+        </NavMenuLinks>
+      </NavBtn>
+    </Nav>
+  )
 }
