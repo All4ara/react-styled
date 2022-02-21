@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/macro';
-import { Link } from 'react-router-dom';
-import { IoMdArrowRoundForward } from 'react-icons/io';
 import One from '../images/rewards.png'
 import Two from '../images/safe.png'
 import Three from '../images/globe.png'
@@ -78,7 +76,7 @@ const ListingsSection = () => {
                     <InfoWrap data-aos='zoom-out-up' data-aos-duration='1200' data-aos-once='true' data-aos-anchor-placement='center-bottom'>
                         <Image src={One} alt='home' />
                         <h2>EXCLUSIVE BENEFITS</h2>
-                        <p>As members of the EthFamDAO you will have access to several exclusive benefits brought to you by Full Of Hits Cards. These benefits include weekly giveaways, exclusive discounts on products and breaks, as well as tips from experts on how to maximize your position in the card collecting industry.</p>
+                        <p>As members of the EthFamDAO you will have access to several exclusive benefits brought to you by Full Of Hits Cards. These benefits include weekly giveaways, exclusive discounts on products and breaks, as well as tips from experts on how to maximize your profits in the card collecting industry.</p>
                     </InfoWrap>
                     <InfoWrap data-aos='zoom-out-up' data-aos-duration='1200' data-aos-once='true' data-aos-anchor-placement='center-bottom'>
                         <Image src={Two} alt='home' />

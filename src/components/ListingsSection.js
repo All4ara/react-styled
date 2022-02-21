@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { IoMdArrowRoundForward } from 'react-icons/io';
-import One from '../images/176.png'
-import Two from '../images/25.png'
-import Three from '../images/40.png'
-import Four from '../images/247.png'
+import One from '../images/lior.png'
+import Two from '../images/ariel.png'
+import Three from '../images/orli.png'
+import Four from '../images/tino.png'
 
 const Section = styled.section`
     width: 100%;
@@ -57,6 +57,7 @@ const Image = styled.img`
     max-height: 512px;
     object-fit: cover;
     margin-bottom: 1rem;
+    border-radius: 50%;
 `
 const InfoLink = styled(Link)`
     display: flex;

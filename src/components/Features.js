@@ -104,7 +104,7 @@ const Features = () => {
               <p>Next Level Basketball is a player development company that has been promoting growth in the South Florida community since 2014.</p>
 
               <p>By donating , it will allow for more athletes onto the playing field. This is just one of the six organizations we plan to empower. More details on our Medium.</p>
-              <InfoLink href='https://twitter.com/EthFanatics' target={"_blank"}>Read More...</InfoLink>
+              <InfoLink href='https://medium.com/@ethfanatics' target={"_blank"}>Read More...</InfoLink>
             </Content>
           </ColumnLeft>
           <ColumnRight>

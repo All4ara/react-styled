@@ -105,7 +105,7 @@ export const Navbar = ({ toggle }) => {
       <MenuBars onClick={toggle} />
       <NavMenu>
 
-        <NavMenuLinks href={"https://discord.gg/FZVDSs45sM"} target={"_blank"}>
+        <NavMenuLinks href={"https://discord.gg/ethfanatics"} target={"_blank"}>
           Discord
         </NavMenuLinks>
         <NavMenuLinks href={"https://twitter.com/EthFanatics"} target={"_blank"}>
@@ -120,8 +120,8 @@ export const Navbar = ({ toggle }) => {
 
       </NavMenu>
       <NavBtn>
-        <NavMenuLinks href={"https://www.instagram.com/ethfanatics/"} target={"_blank"}>
-          Mint
+        <NavMenuLinks href={"https://medium.com/@ethfanatics"} target={"_blank"}>
+          Medium
         </NavMenuLinks>
       </NavBtn>
     </Nav>
