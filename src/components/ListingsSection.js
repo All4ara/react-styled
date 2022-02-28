@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/macro';
-import { Link } from 'react-router-dom';
-import { IoMdArrowRoundForward } from 'react-icons/io';
 import One from '../images/lior.png'
 import Two from '../images/ariel.png'
 import Three from '../images/orli.png'
@@ -59,22 +57,7 @@ const Image = styled.img`
     margin-bottom: 1rem;
     border-radius: 50%;
 `
-const InfoLink = styled(Link)`
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #0001da;
-    width: 140px;
-    transition: 0.3s;
 
-    &:hover {
-        transform: translateY(-2px);
-    }
-
-`
-const Arrow = styled(IoMdArrowRoundForward)`
-    margin-left: 10px;
-`
 
 
 const ListingsSection = () => {
