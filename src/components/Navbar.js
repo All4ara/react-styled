@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components/macro';
 import { Link, useLocation } from 'react-router-dom';
-import { menuData } from '../data/MenuData.js'
-import { Button } from './Button.js';
+// import { menuData } from '../data/MenuData.js'
+// import { Button } from './Button.js';
 import Bars from '../images/three-dots.png';
 import EFLogo from '../images/ef-logo.png'
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Button } from './Button';
 
 const Section = styled.section`
     width: 100%;
@@ -96,7 +95,6 @@ const InfoSection = ({ heading, paragraphOne, paragraphTwo, paragraphThree, para
                         <br />
                         {paragraphTen}
                     </p>
-                    {/* <Button to="/homes" primary="true">{buttonLabel}</Button> */}
                 </ColumnLeft>
                 <ColumnRight reverse={reverse}>
                     <img src={image} alt='home' data-aos='zoom-out' data-aos-duration='500' data-aos-once='true' data-aos-delay={delay} data-aos-anchor-placement='center-bottom' />
